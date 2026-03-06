@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Startup Idea Validation And Ranking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Startup Idea Validation And Ranking</h1>
+</header>
+
+<!-- LOGIN PAGE -->
+<div class="container" id="loginPage">
+
+<h2>User Login</h2>
+
+<p class="about-text">
+Welcome to Startup Idea Validation And Ranking platform.
+Submit startup ideas, validate them using likes and dislikes,
+and see which idea ranks at the top.
+</p>
+
+<input type="text" id="name" placeholder="Enter Name">
+<input type="tel" id="phone" placeholder="Enter Phone Number">
+<button onclick="login()">Login</button>
+
+</div>
+
+<!-- DASHBOARD -->
+<div class="container hidden" id="dashboard">
+
+<h2>Dashboard</h2>
+
+<h3>Welcome, <span id="displayUser"></span></h3>
+
+<h3>Startup Categories</h3>
+
+<div class="card-container">
+
+<div class="idea-type-card" onclick="showCategoryIdeas('technology')">
+<h4>Technology</h4>
+<p>AI, Apps, Automation, Software products.</p>
+</div>
+
+<div class="idea-type-card" onclick="showCategoryIdeas('healthcare')">
+<h4>Healthcare</h4>
+<p>Medical platforms, fitness apps.</p>
+</div>
+
+<div class="idea-type-card" onclick="showCategoryIdeas('education')">
+<h4>Education</h4>
+<p>E-learning, skill development tools.</p>
+</div>
+
+<div class="idea-type-card" onclick="showCategoryIdeas('ecommerce')">
+<h4>E-Commerce</h4>
+<p>Online marketplaces and delivery models.</p>
+</div>
+
+</div>
+
+<hr>
+
+<button onclick="showSubmit()">Submit Idea</button>
+<button onclick="showIdeas()">View & Vote</button>
+<button onclick="showLeaderboard()">Leaderboard</button>
+<button onclick="logout()">Logout</button>
+
+</div>
+
+<!-- CATEGORY IDEAS -->
+<div class="container hidden" id="categoryIdeas">
+<h2>Startup Ideas</h2>
+<div id="categoryIdeaList"></div>
+<button onclick="goBack()">Back</button>
+</div>
+
+<!-- SUBMIT IDEA -->
+<div class="container hidden" id="submitIdea">
+<h2>Submit Startup Idea</h2>
+<input type="text" id="ideaTitle" placeholder="Idea Title">
+<textarea id="ideaDescription" placeholder="Describe your startup idea"></textarea>
+<button onclick="submitIdea()">Submit</button>
+<button onclick="goBack()">Back</button>
+</div>
+
+<!-- VIEW IDEAS -->
+<div class="container hidden" id="ideasPage">
+<h2>Vote Ideas</h2>
+<div id="ideasList"></div>
+<button onclick="goBack()">Back</button>
+</div>
+
+<!-- LEADERBOARD -->
+<div class="container hidden" id="leaderboardPage">
+<h2>Leaderboard</h2>
+<div id="leaderboardList"></div>
+<button onclick="goBack()">Back</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
